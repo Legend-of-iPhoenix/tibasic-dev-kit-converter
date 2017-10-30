@@ -13,7 +13,7 @@ function submitDirtyCode() {
 }
 
 function convertCode(codeToConvert) {
-  document.getElementById("clean-code").value = detectFormatGraphScreen(codeToConvert);
+  document.getElementById("clean-code").value = optimize(detectClearVars(detectFormatGraphScreen(codeToConvert)));
 }
 
 function detectFormatGraphScreen(code)
@@ -25,8 +25,11 @@ function detectFormatGraphScreen(code)
       return fixedCode;
 }
 
-/*
+
 function detectClearVars(code) {
   var fixedCode = code.replace(/prgmCLR0VAR/g,"DelVar ADelVar BDelVar CDelVar DDelVar EDelVar FDelVar GDelVar HDelVar IDelVar JDelVar KDelVar LDelVar MDelVar NDelVar ODelVar QDelVar RDelVar SDelVar TDelVar UDelVar VDelVar WDelVar XDelVar YDelVar ZDelVar PDelVar theta");
 }
-*/
+
+function optimize(code) {
+	return code.replace(/)->/g,"->");
+}
