@@ -2,18 +2,17 @@ function submitDirtyCode() {
 	var code = document.getElementById("dirty-code").value;
   
   if (code != '') {
-    var input = document.getElementsByTagName("input");
     input[0].submit();
     convertCode(code);
   }
   else
   {
-    alert("please gimme code; I'm hungry :P");
+    alert("Please gimme code; I'm hungry :P");
   }
 }
 
 function convertCode(codeToConvert) {
-  document.getElementByTagName("output").value = detectFormatGraphScreen(codeToConvert);
+  document.getElementByTagName("clean-code").value = detectFormatGraphScreen(codeToConvert);
 }
 
 function detectFormatGraphScreen(code)
