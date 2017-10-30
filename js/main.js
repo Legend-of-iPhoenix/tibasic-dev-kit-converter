@@ -1,11 +1,10 @@
 function submitDirtyCode() {
 	var code = document.getElementById("dirty-code").value;
-	alert(code);
+	convertCode(code);
   
   if (code != '') {
     var input = document.getElementById("input");
     input.submit();
-    convertCode(code);
   }
   else
   {
