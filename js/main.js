@@ -1,5 +1,5 @@
 function submitDirtyCode() {
-	var code = document.getElementById("dirty-code").value;
+	var code = document.getElementsByTagName("dirty-code").value;
   
   if (code != '') {
     var input = document.getElementByTagName("input");
