@@ -2,7 +2,7 @@ function submitDirtyCode() {
 	var code = document.getElementsByTagName("dirty-code").value;
   
   if (code != '') {
-    var input = document.getElementByTagName("input");
+    var input = document.getElementsByTagName("input");
     input[0].submit();
     convertCode(code);
   }
@@ -13,7 +13,7 @@ function submitDirtyCode() {
 }
 
 function convertCode(codeToConvert) {
-  document.getElementByTagName("clean-code").value = detectFormatGraphScreen(codeToConvert);
+  document.getElementsByTagName("clean-code").value = detectFormatGraphScreen(codeToConvert);
 }
 
 function detectFormatGraphScreen(code)
