@@ -1,5 +1,5 @@
 function submitDirtyCode() {
-	var code = document.getElementsByTagName("dirty-code").value;
+	var code = document.getElementsByTagName("dirty-code")[0].value;
   
   if (code != '') {
     var input = document.getElementsByTagName("input");
@@ -13,7 +13,7 @@ function submitDirtyCode() {
 }
 
 function convertCode(codeToConvert) {
-  document.getElementsByTagName("clean-code").value = detectFormatGraphScreen(codeToConvert);
+  document.getElementsByTagName("clean-code")[0].value = detectFormatGraphScreen(codeToConvert);
 }
 
 function detectFormatGraphScreen(code)
