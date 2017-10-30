@@ -2,7 +2,7 @@ function submitDirtyCode() {
 	var code = document.getElementById("dirty-code").value;
   
   if (code != '') {
-    var input = document.getElementsById("input");
+    var input = document.getElementById("input");
     input.submit();
     convertCode(code);
   }
