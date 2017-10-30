@@ -1,5 +1,6 @@
 function submitDirtyCode() {
 	var code = document.getElementById("dirty-code").value;
+	alert(code);
   
   if (code != '') {
     var input = document.getElementById("input");
@@ -18,7 +19,6 @@ function convertCode(codeToConvert) {
 
 function detectFormatGraphScreen(code)
 {
-	alert("1");
       var fixedCode = code.replace(/1:prgmthetaFMT/g,"RectGC:CoordOn:GridOff:AxesOn Black:LabelOff:ExprOn:BorderColor 1:DetectAsymOn");
       fixedCode = fixedCode.replace(/2:prgmthetaFMT/g,"GridOff:AxesOff:BorderColor 4");
       fixedCode = fixedCode.replace(/3:prgmthetaFMT/g,"GridOff:AxesOff:BorderColor 4:ZQuadrant1::264->Xmax:164->Ymax");
