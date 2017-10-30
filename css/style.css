@@ -1,1 +1,15 @@
-/* wip */
+body: {
+  background: #454545;
+}
+
+a: {
+  color: #555;
+}
+
+p: {
+  color: #333;
+}
+
+h6: {
+  color: #333;
+}
