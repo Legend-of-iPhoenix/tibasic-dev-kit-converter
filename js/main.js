@@ -32,8 +32,8 @@ function detectClearVars(code) {
 
 function optimize(code) {
 	var fixedCode = code;
-	fixedCode = fixedCode.replace(/')'->/g,"->");
-	fixedCode = fixedCode.replace(/'"'->/g,"->");
+	fixedCode = fixedCode.replace(/\u0029->/g,"->");
+	fixedCode = fixedCode.replace(/"->/g,"->");
 	fixedCode = fixedCode.replace(/0->/g,"DelVar ");
 	fixedCode = fixedCode.replace(/}->/g,"->");
 	return fixedCode;
