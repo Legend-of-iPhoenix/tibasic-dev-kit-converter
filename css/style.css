@@ -1,15 +1,46 @@
+main {
+    background-color: rgba(63, 127, 191, 0.11);
+}
+
 body {
-  background-color: #454545;
+    animation: fadein 2s;
+    margin: 0 8%;
+    font-family: "Microsoft YaHei UI Light"
 }
 
-a {
-  color: #555;
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-p {
-  color: #333;
+h1 {
+    text-align: center;
+    display: inline;
 }
 
-h6 {
-  color: #333;
+section {
+    margin-left: 20px;
 }
+
+img#headerIMG {
+    padding: 0 20px;
+    border-radius: 10px;
+    margin-bottom: -25.1px
+}
+
+h1 {
+    font-size: 250%;
+    margin-top: -5px;
+    font-family: Georgia;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    text-align: center;
+}
+
+
