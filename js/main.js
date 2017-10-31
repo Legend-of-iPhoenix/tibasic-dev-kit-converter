@@ -18,7 +18,8 @@ function convertCode(codeToConvert) {
 
 function detectFormatGraphScreen(code)
 {
-      var fixedCode = code.replace(/1:prgmthetaFMT/g,"RectGC:CoordOn:GridOff:AxesOn Black:LabelOff:ExprOn:BorderColor 1:DetectAsymOn");
+      var fixedCode = code;
+      fixedCode = fixedCode.replace(/1:prgmthetaFMT/g,"RectGC:CoordOn:GridOff:AxesOn Black:LabelOff:ExprOn:BorderColor 1:DetectAsymOn");
       fixedCode = fixedCode.replace(/2:prgmthetaFMT/g,"GridOff:AxesOff:BorderColor 4");
       fixedCode = fixedCode.replace(/3:prgmthetaFMT/g,"GridOff:AxesOff:BorderColor 4:ZQuadrant1::264->Xmax:164->Ymax");
       return fixedCode;
@@ -30,7 +31,8 @@ function detectClearVars(code) {
 }
 
 function optimize(code) {
-	var fixedCode = code.replace(/')'->/g,"->");
+	var fixedCode = code;
+	fixedCode = fixedCode.replace(/')'->/g,"->");
 	fixedCode = fixedCode.replace(/'"'->/g,"->");
 	fixedCode = fixedCode.replace(/0->/g,"DelVar ");
 	fixedCode = fixedCode.replace(/}->/g,"->");
