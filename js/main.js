@@ -35,7 +35,8 @@ function optimize(code) {
 	var fixedCode = code;
 	fixedCode = fixedCode.replace(/\u0029->/g,"->");
 	fixedCode = fixedCode.replace(/"->/g,"->");
-	fixedCode = fixedCode.replace(/0->/g,"DelVar ");
+	fixedCode = fixedCode.replace(/0->[A-Z]/g,"DelVar ");
 	fixedCode = fixedCode.replace(/}->/g,"->");
+	fixedCode = fixedCode.replace(/DelVar ([A-Z])\n/g,"DelVar \1");
 	return fixedCode;
 }
