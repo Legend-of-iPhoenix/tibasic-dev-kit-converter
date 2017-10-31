@@ -28,6 +28,7 @@ function detectFormatGraphScreen(code)
 
 function detectClearVars(code) {
   var fixedCode = code.replace(/prgmCLR0VAR/g,"DelVar ADelVar BDelVar CDelVar DDelVar EDelVar FDelVar GDelVar HDelVar IDelVar JDelVar KDelVar LDelVar MDelVar NDelVar ODelVar QDelVar RDelVar SDelVar TDelVar UDelVar VDelVar WDelVar XDelVar YDelVar ZDelVar PDelVar theta");
+  return fixedCode;
 }
 
 function optimize(code) {
