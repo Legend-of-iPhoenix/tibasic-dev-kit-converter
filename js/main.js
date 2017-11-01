@@ -4,7 +4,6 @@ function submitDirtyCode() {
   
   if (code != '') {
     var input = document.getElementById("input");
-    //input.submit();
   }
   else
   {
