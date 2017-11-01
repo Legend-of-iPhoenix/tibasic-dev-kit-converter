@@ -32,7 +32,13 @@ img#headerIMG {
     margin-bottom: -25.1px
 }
 
-#form {
+#dirty-code {
+    width: 100%;
+    background-color:#333;
+    border-radius:5px;
+    box-shadow:0 1px 5px #222 inset,0 1px 0 #666
+}
+#clean-code {
     width: 100%;
     background-color:#333;
     border-radius:5px;
