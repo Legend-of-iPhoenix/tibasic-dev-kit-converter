@@ -1,11 +1,8 @@
-main {
-    background-color: #454545;
-}
-
 body {
     /*animation: fadein 2s;*/
     margin: 0 8%;
     font-family: "Arial";
+    background-color: #454545;
 }
 
 @keyframes fadein {
@@ -15,11 +12,6 @@ body {
     to {
         opacity: 1;
     }
-}
-
-h1 {
-    text-align: center;
-    display: inline;
 }
 
 section {
@@ -33,27 +25,32 @@ img#headerIMG {
 }
 
 #dirty-code {
+    color: #bbb;
     width: 100%;
     background-color:#333;
     border-radius:5px;
     box-shadow:0 1px 5px #222 inset,0 1px 0 #666
 }
 #clean-code {
+    color: #bbb;
     width: 100%;
     background-color:#333;
     border-radius:5px;
     box-shadow:0 1px 5px #222 inset,0 1px 0 #666
 }
 
+p {
+    font-family: Georgia;
+    color: #ddd;
+}
 h1 {
+    text-align: center;
+    display: inline;
+    color: #bbb;
     font-size: 250%;
     margin-top: -5px;
     font-family: Georgia;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-}
-
-header {
-    text-align: center;
 }
 
 
