@@ -36,6 +36,34 @@ function optimize(code) {
 	fixedCode = fixedCode.replace(/"->/g,"->");
 	fixedCode = fixedCode.replace(/0->[A-Z]/g,"DelVar ");
 	fixedCode = fixedCode.replace(/}->/g,"->");
-	fixedCode = fixedCode.replace(/DelVar ([A-Z])\n/g,"DelVar \1");
+	
+	fixedCode = fixedCode.replace(/DelVar A\n/g,"DelVar A");
+	fixedCode = fixedCode.replace(/DelVar B\n/g,"DelVar B");
+	fixedCode = fixedCode.replace(/DelVar C\n/g,"DelVar C");
+	fixedCode = fixedCode.replace(/DelVar D\n/g,"DelVar D");
+	fixedCode = fixedCode.replace(/DelVar E\n/g,"DelVar E");
+	fixedCode = fixedCode.replace(/DelVar F\n/g,"DelVar F");
+	fixedCode = fixedCode.replace(/DelVar G\n/g,"DelVar G");
+	fixedCode = fixedCode.replace(/DelVar H\n/g,"DelVar H");
+	fixedCode = fixedCode.replace(/DelVar I\n/g,"DelVar I");
+	fixedCode = fixedCode.replace(/DelVar J\n/g,"DelVar J");
+	fixedCode = fixedCode.replace(/DelVar K\n/g,"DelVar K");
+	fixedCode = fixedCode.replace(/DelVar L\n/g,"DelVar L");
+	fixedCode = fixedCode.replace(/DelVar M\n/g,"DelVar M");
+	fixedCode = fixedCode.replace(/DelVar N\n/g,"DelVar N");
+	fixedCode = fixedCode.replace(/DelVar O\n/g,"DelVar O");
+	fixedCode = fixedCode.replace(/DelVar P\n/g,"DelVar P");
+	fixedCode = fixedCode.replace(/DelVar Q\n/g,"DelVar Q");
+	fixedCode = fixedCode.replace(/DelVar R\n/g,"DelVar R");
+	fixedCode = fixedCode.replace(/DelVar S\n/g,"DelVar S");
+	fixedCode = fixedCode.replace(/DelVar T\n/g,"DelVar T");
+	fixedCode = fixedCode.replace(/DelVar U\n/g,"DelVar U");
+	fixedCode = fixedCode.replace(/DelVar V\n/g,"DelVar V");
+	fixedCode = fixedCode.replace(/DelVar W\n/g,"DelVar W");
+	fixedCode = fixedCode.replace(/DelVar X\n/g,"DelVar X");
+	fixedCode = fixedCode.replace(/DelVar Y\n/g,"DelVar Y");
+	fixedCode = fixedCode.replace(/DelVar Z\n/g,"DelVar Z");
+	fixedCode = fixedCode.replace(/DelVar theta\n/g,"DelVar theta");
+	
 	return fixedCode;
 }
