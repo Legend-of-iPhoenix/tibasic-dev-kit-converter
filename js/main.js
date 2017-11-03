@@ -53,7 +53,7 @@ function optimize(code) {
 	fixedCode = fixedCode.replace(/\n^0->Q$/gm,"DelVar Q");
 	fixedCode = fixedCode.replace(/\n^0->R$/gm,"DelVar R");
 	fixedCode = fixedCode.replace(/\n^0->S$/gm,"DelVar S");
-	fixedCode = fixedCode.replace(/\n^0->T$/gm"DelVar T");
+	fixedCode = fixedCode.replace(/\n^0->T$/gm,"DelVar T");
 	fixedCode = fixedCode.replace(/\n^0->U$/gm,"DelVar U");
 	fixedCode = fixedCode.replace(/\n^0->V$/gm,"DelVar V");
 	fixedCode = fixedCode.replace(/\n^0->W$/gm,"DelVar W");
