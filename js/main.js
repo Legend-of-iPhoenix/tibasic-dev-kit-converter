@@ -1,8 +1,14 @@
 function submitDirtyCode() {
+	alert("this is unfinished!");
 	var code = document.getElementById("dirty-code").value;
+	//in order to make my optimizations work, I need to delete all indentation, which is unfortunate.
+	code = code.replace(/\t/g,'');
+	//if they used spaces, alert them with a message telling them to use tabs, because the detection for that is simply too complicated.
+	//wip
+	
 	document.getElementById("charCount1").innerHTML = "Length: "+code.length+" characters";
 	document.getElementById("charCount2").innerHTML = "Length: "+convertCode(code).length+" characters";
-  
+  	
   if (code = '')
     alert("Please gimme code; I'm hungry :P");
 }
@@ -29,6 +35,7 @@ function detectClearVars(code) {
 }
 
 function optimize(code) {
+	
 	var fixedCode = code;
 	fixedCode = fixedCode.replace(/\u0029->/g,"->");
 	fixedCode = fixedCode.replace(/"->/g,"->");
