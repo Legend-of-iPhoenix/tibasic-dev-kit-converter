@@ -1,7 +1,7 @@
 function submitDirtyCode() {
 	var code = document.getElementById("dirty-code").value;
-	document.getElementById("charCount1").value = "Length: "+code.length+" characters";
-	document.getElementById("charCount2").value = "Length: "+convertCode(code).length+" characters";
+	document.getElementById("charCount1").innerHTML = "Length: "+code.length+" characters";
+	document.getElementById("charCount2").innerHTML = "Length: "+convertCode(code).length+" characters";
   
   if (code = '')
     alert("Please gimme code; I'm hungry :P");
@@ -34,33 +34,33 @@ function optimize(code) {
 	fixedCode = fixedCode.replace(/"->/g,"->");
 	fixedCode = fixedCode.replace(/}->/g,"->");
 	
-	fixedCode = fixedCode.replace(/\n[^\}]->A\n/g,"DelVar A");
-	fixedCode = fixedCode.replace(/\n[^\}]->B\n/g,"DelVar B");
-	fixedCode = fixedCode.replace(/\n[^\}]->C\n/g,"DelVar C");
-	fixedCode = fixedCode.replace(/\n[^\}]->D\n/g,"DelVar D");
-	fixedCode = fixedCode.replace(/\n[^\}]->E\n/g,"DelVar E");
-	fixedCode = fixedCode.replace(/\n[^\}]->F\n/g,"DelVar F");
-	fixedCode = fixedCode.replace(/\n[^\}]->G\n/g,"DelVar G");
-	fixedCode = fixedCode.replace(/\n[^\}]->H\n/g,"DelVar H");
-	fixedCode = fixedCode.replace(/\n[^\}]->I\n/g,"DelVar I");
-	fixedCode = fixedCode.replace(/\n[^\}]->J\n/g,"DelVar J");
-	fixedCode = fixedCode.replace(/\n[^\}]->K\n/g,"DelVar K");
-	fixedCode = fixedCode.replace(/\n[^\}]->L\n/g,"DelVar L");
-	fixedCode = fixedCode.replace(/\n[^\}]->M\n/g,"DelVar M");
-	fixedCode = fixedCode.replace(/\n[^\}]->N\n/g,"DelVar N");
-	fixedCode = fixedCode.replace(/\n[^\}]->O\n/g,"DelVar O");
-	fixedCode = fixedCode.replace(/\n[^\}]->P\n/g,"DelVar P");
-	fixedCode = fixedCode.replace(/\n[^\}]->Q\n/g,"DelVar Q");
-	fixedCode = fixedCode.replace(/\n[^\}]->R\n/g,"DelVar R");
-	fixedCode = fixedCode.replace(/\n[^\}]->S\n/g,"DelVar S");
-	fixedCode = fixedCode.replace(/\n[^\}]->T\n/g,"DelVar T");
-	fixedCode = fixedCode.replace(/\n[^\}]->U\n/g,"DelVar U");
-	fixedCode = fixedCode.replace(/\n[^\}]->V\n/g,"DelVar V");
-	fixedCode = fixedCode.replace(/\n[^\}]->W\n/g,"DelVar W");
-	fixedCode = fixedCode.replace(/\n[^\}]->X\n/g,"DelVar X");
-	fixedCode = fixedCode.replace(/\n[^\}]->Y\n/g,"DelVar Y");
-	fixedCode = fixedCode.replace(/\n[^\}]->Z\n/g,"DelVar Z");
-	fixedCode = fixedCode.replace(/0->theta\n/g,"DelVar theta");
+	fixedCode = fixedCode.replace(/\n^0->A$/gm,"DelVar A");
+	fixedCode = fixedCode.replace(/\n^0->B$/gm,"DelVar B");
+	fixedCode = fixedCode.replace(/\n^0->C$/gm,"DelVar C");
+	fixedCode = fixedCode.replace(/\n^0->D$/gm,"DelVar D");
+	fixedCode = fixedCode.replace(/\n^0->E$/gm,"DelVar E");
+	fixedCode = fixedCode.replace(/\n^0->F$/gm,"DelVar F");
+	fixedCode = fixedCode.replace(/\n^0->G$/gm,"DelVar G");
+	fixedCode = fixedCode.replace(/\n^0->H$/gm,"DelVar H");
+	fixedCode = fixedCode.replace(/\n^0->I$/gm,"DelVar I");
+	fixedCode = fixedCode.replace(/\n^0->J$/gm,"DelVar J");
+	fixedCode = fixedCode.replace(/\n^0->K$/gm,"DelVar K");
+	fixedCode = fixedCode.replace(/\n^0->L$/gm,"DelVar L");
+	fixedCode = fixedCode.replace(/\n^0->M$/gm,"DelVar M");
+	fixedCode = fixedCode.replace(/\n^0->N$/gm,"DelVar N");
+	fixedCode = fixedCode.replace(/\n^0->O$/gm,"DelVar O");
+	fixedCode = fixedCode.replace(/\n^0->P$/gm,"DelVar P");
+	fixedCode = fixedCode.replace(/\n^0->Q$/gm,"DelVar Q");
+	fixedCode = fixedCode.replace(/\n^0->R$/gm,"DelVar R");
+	fixedCode = fixedCode.replace(/\n^0->S$/gm,"DelVar S");
+	fixedCode = fixedCode.replace(/\n^0->T$/gm"DelVar T");
+	fixedCode = fixedCode.replace(/\n^0->U$/gm,"DelVar U");
+	fixedCode = fixedCode.replace(/\n^0->V$/gm,"DelVar V");
+	fixedCode = fixedCode.replace(/\n^0->W$/gm,"DelVar W");
+	fixedCode = fixedCode.replace(/\n^0->X$/gm,"DelVar X");
+	fixedCode = fixedCode.replace(/\n^0->Y$/gm,"DelVar Y");
+	fixedCode = fixedCode.replace(/\n^0->Z$/gm,"DelVar Z");
+	fixedCode = fixedCode.replace(/\n^0->theta$/gm,"DelVar theta");
 	
 	fixedCode = fixedCode.replace(/DelVar A\n/g,"DelVar A");
 	fixedCode = fixedCode.replace(/DelVar B\n/g,"DelVar B");
