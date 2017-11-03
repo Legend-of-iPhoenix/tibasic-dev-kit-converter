@@ -1,18 +1,16 @@
 function submitDirtyCode() {
 	var code = document.getElementById("dirty-code").value;
-	convertCode(code);
+	document.getElementById("charCount1").value = "Length: "+code.length+" characters";
+	document.getElementById("charCount2").value = "Length: "+convertCode(code).length+" characters";
   
-  if (code != '') {
-    var input = document.getElementById("input");
-  }
-  else
-  {
+  if (code = '')
     alert("Please gimme code; I'm hungry :P");
-  }
 }
 
 function convertCode(codeToConvert) {
-  document.getElementById("clean-code").value = optimize(detectClearVars(detectFormatGraphScreen(codeToConvert)));
+  var cleanCode = optimize(detectClearVars(detectFormatGraphScreen(codeToConvert)));
+  document.getElementById("clean-code").value = cleanCode;
+  return cleanCode;
 }
 
 function detectFormatGraphScreen(code)
