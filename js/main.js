@@ -1,11 +1,10 @@
 function submitDirtyCode() {
-	alert("this is unfinished!");
 	var code = document.getElementById("dirty-code").value;
 	//in order to make my optimizations work, I need to delete all indentation, which is unfortunate.
 	code = code.replace(/\t/g,'');
 	//if they used spaces, alert them with a message telling them to use tabs, because the detection for that is simply too complicated.
-	//wip
-	
+	//I'll add this soon enough x.x
+	code = "\n"+code;
 	document.getElementById("charCount1").innerHTML = "Length: "+code.length+" characters";
 	document.getElementById("charCount2").innerHTML = "Length: "+convertCode(code).length+" characters";
   	
