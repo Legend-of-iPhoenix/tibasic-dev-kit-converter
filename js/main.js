@@ -5,10 +5,8 @@ var optimizations = [
 	[/prgmCLR0VAR/g,"DelVar ADelVar BDelVar CDelVar DDelVar EDelVar FDelVar GDelVar HDelVar IDelVar JDelVar KDelVar LDelVar MDelVar NDelVar ODelVar QDelVar RDelVar SDelVar TDelVar UDelVar VDelVar WDelVar XDelVar YDelVar ZDelVar PDelVar theta"],
 	[/\u0029->/g, "->"],
 	[/["}]->/g,"->"],
-	[/^0->([A-Z])/g,"DelVar $1"],
-	[/^0->theta$/g,"DelVar theta"],
-	[/DelVar ([A-Z])\n/g,"DelVar $1"],
-	[/DelVar theta\n/g,"DelVar theta"]
+	[/^0->([A-Z|theta])/g,"DelVar $1"],
+	[/DelVar ([A-Z|theta])\n/g,"DelVar $1"]
 ];
 
 function submitDirtyCode() {
