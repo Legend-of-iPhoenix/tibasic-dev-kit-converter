@@ -1,17 +1,16 @@
 body {
-    /*animation: fadein 2s;*/
     margin: 0 8%;
     font-family: "Arial";
     background-color: #454545;
 }
 
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+a {
+    color: #F00;
+    transition: color .4s ease-in-out .25s;
+}
+
+a:hover {
+    color: #FFF;
 }
 
 section {
