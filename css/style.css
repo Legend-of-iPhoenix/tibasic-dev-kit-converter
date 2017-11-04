@@ -56,16 +56,17 @@ textarea#dirty-code:focus {
 }
 
 p {
-    font-family: Georgia;
+    font-family: 'Arial';
     color: #444;
 }
+
 h1 {
     text-align: center;
     display: inline;
-    color: #bbb;
+    color: #555;
     font-size: 250%;
     margin-top: -5px;
-    font-family: Georgia;
+    font-family: 'Arial';
     text-shadow: 5px 5px 5px rgba(100, 100, 100, 0.5);
 }
 
@@ -82,9 +83,10 @@ ol:hover {
 }
 
 li {
+  font-family: 'Arial';
   margin: 10px 0;
+  color: #444;
 }
-
 
 .button {
     background-color: #eee;
