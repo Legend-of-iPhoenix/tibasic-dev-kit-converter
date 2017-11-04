@@ -28,6 +28,7 @@ img#headerIMG {
     color: #bbb;
     width: 100%;
     background-color:#333;
+    border-color: #454545;
     border-radius:5px;
     box-shadow:0 1px 5px #222 inset,0 1px 0 #666;
     border-left: 5px solid;
@@ -38,6 +39,7 @@ img#headerIMG {
     color: #bbb;
     width: 100%;
     background-color:#333;
+    border-color: #454545;
     border-radius:5px;
     box-shadow:0 1px 5px #222 inset,0 1px 0 #666;
     border-left: 5px solid;
