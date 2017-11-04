@@ -72,6 +72,7 @@ h1 {
 .button {
     background-color: #eee;
     border: 2px solid #ccc;
+    border-radius: 5px;
     color: #aaa;
     padding: 15px 32px;
     text-align: center;
