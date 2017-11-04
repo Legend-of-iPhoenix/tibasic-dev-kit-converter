@@ -29,14 +29,25 @@ img#headerIMG {
     width: 100%;
     background-color:#333;
     border-radius:5px;
-    box-shadow:0 1px 5px #222 inset,0 1px 0 #666
+    box-shadow:0 1px 5px #222 inset,0 1px 0 #666;
+    border-left: 5px solid;
+
 }
 #clean-code {
     color: #bbb;
     width: 100%;
     background-color:#333;
     border-radius:5px;
-    box-shadow:0 1px 5px #222 inset,0 1px 0 #666
+    box-shadow:0 1px 5px #222 inset,0 1px 0 #666;
+    border-left: 5px solid;
+
+}
+
+textarea#clean-code:focus {
+    border-left: 5px solid #e23f3f;
+}
+textarea#dirty-code:focus {
+    border-left: 5px solid #e23f3f;
 }
 
 p {
