@@ -1,20 +1,21 @@
 var optimizations = [
 	[/1:prgmthetaFMT/g,"RectGC:CoordOn:GridOff:AxesOn Black:LabelOff:ExprOn:BorderColor 1:DetectAsymOn"],
 	[/2:prgmthetaFMT/g,"GridOff:AxesOff:BorderColor 4"],
-	[/3:prgmthetaFMT/g,"GridOff:AxesOff:BorderColor 4:ZQuadrant1::264->Xmax:164->Ymax"],
+	[/3:prgmthetaFMT/g,"GridOff:AxesOff:BorderColor 4:ZQuadrant1:264->Xmax:164->Ymax"],
 	[/prgmCLR0VAR/g,"DelVar ADelVar BDelVar CDelVar DDelVar EDelVar FDelVar GDelVar HDelVar IDelVar JDelVar KDelVar LDelVar MDelVar NDelVar ODelVar QDelVar RDelVar SDelVar TDelVar UDelVar VDelVar WDelVar XDelVar YDelVar ZDelVar PDelVar theta"],
 	[/\u0029->/g, "->"],
-	[/["}]->/g,"->"],
-	[/^0->([A-Z|theta])/gm,"DelVar $1"],
-	[/DelVar ([A-Z|theta])\n/g,"DelVar $1"]
+	[/["}]->/g, "->"],
+	[/^0->([A-Z|theta])/gm, "DelVar $1"],
+	[/DelVar ([A-Z|theta])\n/g, "DelVar $1"],
+	[/SetUpEditor |L([A-Z0-9]{1,5})/g, "SetUpEditor $1"]
 ];
 
 function submitDirtyCode() {
 	var code = document.getElementById("dirty-code").value;
 	
 	// In order to make my optimizations work, I need to delete all indentation, which is unfortunate.
-	code = code.replace(/^\t+/g, "");
-	code = code.replace(/^ +/g, "");
+	code = code.replace(/^\t*/g, "");
+	code = code.replace(/^ */g, "");
 	
 	// Check if empty code
 	if (code == "") {
